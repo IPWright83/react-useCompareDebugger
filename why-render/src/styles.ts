@@ -1,4 +1,4 @@
-const styles = {
+export const styles = {
     keyStyle: "font-weight:bold;color:#746A7",
     arrowStyle: "color:#353F47",
     prevStyle: "color:#ABABAB",
@@ -12,4 +12,3 @@ const styles = {
     },
 };
 
-export default styles;

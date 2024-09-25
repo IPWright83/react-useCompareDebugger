@@ -1,10 +1,11 @@
 {
-    "name": "react-use-compare-debugger",
-    "version": "1.0.8",
+    "name": "why-render",
+    "version": "2.0.0",
     "description": "Allows comparing two state/prop trees for differences",
-    "main": "index.js",
+    "main": "build/index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc"
     },
     "repository": {
         "type": "git",
@@ -28,5 +29,11 @@
         "render",
         "compare",
         "why"
-    ]
+    ],
+    "dependencies": {
+        "typescript": "^5.6.2"
+    },
+    "devDependencies": {
+        "@types/react": "^18.3.9"
+    }
 }

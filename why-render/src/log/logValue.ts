@@ -1,13 +1,12 @@
-import styles from "./styles";
-import isObject from "./isObject";
-import isFunction from "./isFunction";
+import { styles } from "../styles";
+import { isObject, isFunction } from "../utils";
 
 /**
  * Gets the format of a value
  * @param  {Any}    value       The value to format
  * @return {String}             The value for logging
  */
-const getFormat = value => {
+const getFormat = (value: any) => {
     if (isFunction(value)) {
         return "Function";
     }
@@ -25,7 +24,7 @@ const getFormat = value => {
  * @param  {Any}    previous    The previous value
  * @param  {Any}    current     The current value
  */
-const logValue = (key, previous, current) => {
+export const logValue = (key: string, previous: any, current: any) => {
     const areReferentiallyEqual = previous === current;
     const nextStyle = areReferentiallyEqual ? styles.prevStyle : styles.nextStyle;
     const matchStyle = areReferentiallyEqual ? styles.matchStyle : styles.unmatchStyle;
@@ -43,4 +42,3 @@ const logValue = (key, previous, current) => {
     );
 };
 
-export default logValue;
